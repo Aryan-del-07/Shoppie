@@ -1,0 +1,314 @@
+/* ─── About Page Styles ────────────────────────────────────────── */
+
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Common tokens inside about page */
+.about-page .eyebrow {
+  display: inline-block;
+  color: #f97316;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-page .muted {
+  color: #a1a1aa;
+  line-height: 1.75;
+}
+
+/* ── Brand Hero Section ────────────────────────────── */
+.about-brand-card {
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 48px;
+}
+
+.about-brand-card::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-brand-heading {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 12px 0 0;
+  color: #ffffff;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-pillar:hover {
+  transform: translateY(-2px);
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.about-pillar-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* ── Developer Section ─────────────────────────────── */
+.about-dev-section {
+  margin-top: 20px;
+}
+
+.about-dev-header {
+  margin-bottom: 24px;
+}
+
+.about-dev-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+  color: #ffffff;
+}
+
+.dev-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 48px 52px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.dev-card::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Photo */
+.dev-photo-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid rgba(249, 115, 22, 0.4);
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.2), 0 16px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dev-photo:hover {
+  transform: scale(1.03);
+  border-color: #f97316;
+  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.35), 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Developer Info Column */
+.dev-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-role-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: #fb923c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.dev-name {
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.dev-bio-para {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  color: #a1a1aa;
+}
+
+.dev-quote {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f97316;
+  font-style: italic;
+  margin: 12px 0 22px;
+  padding-left: 14px;
+  border-left: 3px solid #f97316;
+}
+
+/* Skills */
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.skill-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d4d4d8;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.22s ease;
+}
+
+.skill-chip:hover {
+  border-color: rgba(249, 115, 22, 0.5);
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Social Links */
+.dev-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.dev-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-link.github {
+  background: #27272a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fafafa;
+}
+
+.dev-link.github:hover {
+  background: #3f3f46;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dev-link.linkedin {
+  background: rgba(10, 102, 194, 0.15);
+  border: 1px solid rgba(10, 102, 194, 0.35);
+  color: #60a8f8;
+}
+
+.dev-link.linkedin:hover {
+  background: rgba(10, 102, 194, 0.28);
+  border-color: rgba(10, 102, 194, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.3);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 860px) {
+  .dev-card {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .dev-photo-wrap {
+    margin: 0 auto;
+  }
+
+  .dev-role-badge {
+    align-self: center;
+  }
+
+  .dev-skills,
+  .dev-links {
+    justify-content: center;
+  }
+
+  .dev-quote {
+    text-align: left;
+    margin: 16px auto 20px;
+    max-width: 460px;
+  }
+
+  .about-brand-card {
+    padding: 36px 24px;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+}
